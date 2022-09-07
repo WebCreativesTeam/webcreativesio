@@ -1,5 +1,5 @@
 import styles from 'styles/serviceDetails.module.css'
-const SingleService = () => {
+const serviceDetails = () => {
     return ( 
         <div>
 

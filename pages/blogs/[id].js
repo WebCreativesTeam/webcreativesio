@@ -1,6 +1,6 @@
 import styles from 'styles/blogPost.module.css'
 
-const SingleBlog = () => {
+const BlogPost = () => {
     return ( 
         <div>
 

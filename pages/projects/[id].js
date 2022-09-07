@@ -1,5 +1,5 @@
 import styles from 'styles/projectDetails.module.css'
-const SingleProject = () => {
+const ProjectDetails = () => {
     return ( 
         <div>
 
