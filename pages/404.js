@@ -1,3 +1,4 @@
+import styles from 'styles/404.module.css'
 const NotFound  = () => {
     return ( 
         <div>
