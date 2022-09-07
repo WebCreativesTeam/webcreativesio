@@ -1,4 +1,4 @@
-import styles from 'styles/singleBlog.module.css'
+import styles from 'styles/blogPost.module.css'
 
 const SingleBlog = () => {
     return ( 

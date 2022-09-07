@@ -1,4 +1,4 @@
-import styles from 'styles/singleProject.module.css'
+import styles from 'styles/projectDetails.module.css'
 const SingleProject = () => {
     return ( 
         <div>

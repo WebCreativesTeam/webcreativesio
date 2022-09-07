@@ -1,4 +1,4 @@
-import styles from 'styles/singleService.module.css'
+import styles from 'styles/serviceDetails.module.css'
 const SingleService = () => {
     return ( 
         <div>
