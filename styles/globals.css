@@ -22,8 +22,28 @@ p{
     @apply text-base text-custom-gray leading-[30px];  
 }
 
+input[type= 'text'],input[type = 'email'], input[type = 'password'], input[type = 'number'] {
+    @apply h-[64] rounded-[4px] w-full text-base px-[34px] py-[15px];
+}
+textarea{
+    @apply  min-h-[180px] max-h-[180px]  px-[34px] py-[15px];
+}
+
 @components{
+
     .button-primary{
-        @apply bg-custom-black  rounded-[10px] h-[60px] min-w-[180px] text-base;
+        @apply bg-custom-black  rounded-[10px] h-[60px] min-w-[180px] text-base font-semibold shadow-[8px_8px_0px_0px_primary];
+    }
+    .button-secondary{
+        @apply bg-secondary  rounded-[8px] h-[60px] min-w-[180px] text-base font-medium;
+    }
+    .button-muted{
+        @apply bg-muted  rounded-[4px] h-[60px] min-w-[180px] text-base font-medium;
+    }
+    .pagination_button{
+        @apply  bg-primary  rounded-[4px] h-[56px] min-w-[56px] text-base font-medium;
+    }
+    .pagination_button_muted{
+        @apply  bg-muted  rounded-[4px] h-[56px] min-w-[56px] text-base font-medium;
     }
 }
