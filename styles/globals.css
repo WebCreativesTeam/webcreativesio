@@ -3,33 +3,36 @@
 @tailwind utilities;
 
 body{
-    @apply font-poppins;
+    @apply font-poppins bg-[url(/images/bgImage.svg)] bg-cover;
 }
 
 h1{
-    @apply text-3xl font-semibold text-custom-black leading-[81px];
+    @apply text-xl font-semibold capitalize  text-custom-black lg:text-2xl xl:text-3xl;
 }
 h2{
-    @apply text-2xl font-semibold text-custom-black leading-[54px] relative before:absolute before:w-full before:left-0 before:bottom-0 before:h-[9px] before:bg-secondary;
+    @apply text-lg w-fit font-semibold text-custom-black capitalize  relative before:absolute before:w-full before:left-0 before:bottom-[15%] before:h-[9px] before:bg-secondary before:z-[-1] lg:text-xl xl:text-2xl ;
 }
 h3{
-    @apply text-xl font-semibold text-custom-black leading-[34px];
+    @apply text-base capitalize  font-semibold text-custom-black lg:text-lg xl:text-xl ;
 }
 h4{
-    @apply text-lg font-semibold text-custom-black leading-[33.6px];
+    @apply text-sm capitalize font-semibold text-custom-black lg:text-base xl:text-lg ;
 }
 p{
-    @apply text-base text-custom-gray leading-[30px];  
+    @apply text-xs capitalize  text-custom-gray lg:text-sm xl:text-base;  
 }
 
 input[type= 'text'],input[type = 'email'], input[type = 'password'], input[type = 'number'] {
-    @apply h-[64] rounded-[4px] w-full text-base px-[34px] py-[15px];
+    @apply h-[64] rounded-[4px] w-full text-xs px-[17px] py-[7.5px] xl:px-[34px] xl:py-[15px] focus:outline-none lg:text-sm xl:text-base;
 }
 textarea{
-    @apply  min-h-[180px] max-h-[180px]  px-[34px] py-[15px];
+    @apply  min-h-[180px] max-h-[180px]  px-[34px] py-[15px] text-xs lg:text-sm xl:text-base;
 }
 a{
     @apply block w-fit;
+}
+section{
+    @apply py-14;
 }
 @layer components{
 
@@ -37,10 +40,10 @@ a{
         @apply bg-custom-black text-white  rounded-[10px] h-[50px] min-w-[140px] text-center flex justify-center items-center text-sm font-semibold shadow-primary shadow-[6px_6px_0px_0px] xl:shadow-[8px_8px_0px_0px] xl:shadow-primary xl:text-base xl:h-[60px] xl:min-w-[180px];
     }
     .button-secondary{
-        @apply bg-secondary  rounded-[8px] h-[60px] min-w-[180px] text-base font-medium;
+        @apply bg-secondary  rounded-[8px]  h-[50px] min-w-[120px] text-center flex justify-center items-center text-xs font-medium  xl:text-base xl:h-[60px] xl:min-w-[160px];
     }
     .button-muted{
-        @apply bg-muted  rounded-[4px] h-[60px] min-w-[180px] text-base font-medium;
+        @apply bg-muted  rounded-[4px]  h-[50px] min-w-[120px] text-center flex justify-center items-center text-sm font-medium  xl:text-base xl:h-[60px] xl:min-w-[160px];
     }
     .pagination-button{
         @apply  bg-primary  rounded-[4px] h-[56px] min-w-[56px] text-base font-medium;

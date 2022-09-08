@@ -16,6 +16,9 @@ const Header = () => {
   return (
     <header>
       <div className={classnames(styles.headerWrapper,'page-wrapper')}>
+        <div className={classnames(styles.logo)}>
+        <Logo />
+        </div>
         <nav className={classnames(styles.menu, open && styles.menuOpen)} >
           {links.map(link =>{
                return(
@@ -25,9 +28,7 @@ const Header = () => {
                )
           })}
         </nav>
-        <div className={classnames(styles.logo)}>
-        <Logo />
-        </div>
+        
         <Link href = '/getStarted'>
         <a className="button-primary hidden lg:flex order-3">Say Hi!</a>
         </Link>
