@@ -1,0 +1,32 @@
+.logo{
+    @apply relative lg:order-1 ;
+}
+.headerWrapper{
+    @apply  flex justify-between items-center py-4 lg:justify-between;
+}
+.menu{
+    @apply translate-x-full capitalize w-full h-full flex flex-col items-center justify-center gap-5 font-medium text-base bg-white fixed left-0 top-0 transition-transform ease-in-out duration-150 lg:relative lg:h-fit lg:w-fit lg:flex-row  lg:text-sm lg:font-normal lg:order-2 lg:mx-auto lg:transform-none lg:text-custom-gray xl:gap-[44px] xl:text-base  ;
+}
+.menu a{
+    @apply pb-2 relative  after:w-[0px] hover:after:w-[32px] after:h-[3px] after:absolute after:bottom-0 after:bg-custom-black after:left-1/2 after:-translate-x-1/2 after:rounded-full after:transition-all duration-150 lg:hover:text-custom-black;
+}
+.menuOpen{
+    @apply translate-x-0;
+}
+
+.menuBtn{
+    @apply w-[24px] aspect-square flex flex-col justify-around relative lg:hidden;
+    
+}
+.menuBtn span{
+   @apply w-full h-[2px] bg-custom-black rounded-full transition-all duration-150 origin-[2.5%];
+}
+.menuBtnOpen span:first-child{
+    @apply rotate-45;
+}
+.menuBtnOpen span:nth-child(2){
+    @apply opacity-0 -translate-x-full;
+}
+.menuBtnOpen span:last-child{
+    @apply -rotate-45;
+}

@@ -1,14 +1,45 @@
+import Logo from "components/logo";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import styles from "./header.module.css";
+import classnames from "classnames";
 const Header = () => {
-    return ( 
-        <header>
-             <div>
-                   
-             </div>
-             <nav>
-                 
-             </nav>
-        </header>
-     );
-}
- 
+  const [open, setOpen] = useState(false);
+  const links = [
+     {label: 'Home', route: '/', class: ''},
+     {label: 'about us', route: '/aboutUs', class: ''},
+     {label: 'services', route: '/services', class: ''},
+     {label: 'blogs', route: '/blogs', class: ''},
+     {label: 'projects', route: '/projects', class: ''},
+     {label: 'Say Hi!', route: '/getStarted', class: 'button-primary lg:hidden'},
+  ]
+  return (
+    <header>
+      <div className={classnames(styles.headerWrapper,'page-wrapper')}>
+        <nav className={classnames(styles.menu, open && styles.menuOpen)} >
+          {links.map(link =>{
+               return(
+                    <Link  href = {link.route} key = {link.label}>
+                    <a onClick={() => setOpen(false)} className={link?.class}>{link.label}</a>
+               </Link>
+               )
+          })}
+        </nav>
+        <div className={classnames(styles.logo)}>
+        <Logo />
+        </div>
+        <Link href = '/getStarted'>
+        <a className="button-primary hidden lg:flex order-3">Say Hi!</a>
+        </Link>
+        <button className={classnames(styles.menuBtn, open && styles.menuBtnOpen)} onClick={() => setOpen(val => !val)}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+      </div>
+    </header>
+  );
+};
+
 export default Header;
