@@ -1,0 +1,16 @@
+.card{
+    @apply aspect-[4/5] w-[250px] bg-white rounded-[10px] overflow-hidden xl:rounded-[20px]  lg:w-[300px] xl:w-[400px];
+}
+.card .imageHolder{
+    @apply h-1/2 relative;
+}
+.contents {
+    @apply h-1/2 flex flex-col items-center justify-between p-6 text-center xl:p-8;
+}
+.contents > span{
+    @apply bg-muted text-xs text-custom-black min-w-[60px] p-2 h-[25px] xl:min-w-[120px] flex items-center justify-center xl:text-sm xl:h-[35px];
+}
+.noImage{
+    @apply h-full w-full text-custom-gray flex items-center justify-center ;
+}
+
