@@ -1,0 +1,15 @@
+
+.card{
+    @apply  max-w-[400px] rounded-[6px] xl:rounded-[8px] p-8 pt-14 relative flex flex-col gap-4 lg:max-w-[500px] lg:gap-6 lg:pt-20 lg:p-10 xl:max-w-[640px] xl:gap-8 xl:pt-24 xl:p-12 ;
+}
+.card .imageHolder {
+    @apply w-[80px] aspect-square rounded-full border-4 border-solid border-current overflow-hidden absolute bottom-full translate-y-1/2 lg:w-[100px] xl:w-[120px] ;
+}
+
+.review{
+    @apply font-medium line-clamp-3;
+}
+.rating{
+    @apply mt-auto;
+}
+
