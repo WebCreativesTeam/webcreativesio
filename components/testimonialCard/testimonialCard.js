@@ -1,16 +1,14 @@
 import Image from "next/image";
 import ReactStars from "react-rating-stars-component";
 import styles from './testimonialCard.module.css'
+import addAlpha from 'util/addAlpha'
 const TestimonialCard = ({ image, name, role, review, rating ,color}) => {
-    const addAlpha =(color ,opacity) =>{
-        // coerce values so ti is between 0 and 1.
-        const _opacity = Math.round(Math.min(Math.max(opacity || 1, 0), 1) * 255);
-        return color + _opacity.toString(16).toUpperCase();
-    }
+    
   return (
-    <div className={styles.card} style = {{backgroundColor: addAlpha(color, 0.15)}}>
+    <div className={styles.cardHolder}>
+      <div className={styles.card} style = {{backgroundColor: addAlpha(color, 0.15)}}>
       <div className={styles.imageHolder} style = {{color: color}}>
-      <Image src={image} alt="customer" layout="responsive"/>
+      <Image src={image} alt="customer" layout="fill" objectFit="cover" objectPosition='top'/>
       </div>
       <div>
       <h4>{name}</h4>
@@ -28,6 +26,7 @@ const TestimonialCard = ({ image, name, role, review, rating ,color}) => {
       activeColor = {'#FFF80A'}
        />
       </div>
+    </div>
     </div>
   );
 };

@@ -2,15 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+#__next{
+    @apply overflow-x-hidden;
+}
 body{
-    @apply font-poppins bg-[url(/images/bgImage.svg)] bg-cover;
+    @apply font-poppins  bg-[url(/images/bgImage.svg)] bg-cover;
 }
 
 h1{
     @apply text-xl font-semibold capitalize  text-custom-black lg:text-2xl xl:text-3xl;
 }
 h2{
-    @apply text-lg w-fit font-semibold text-custom-black capitalize  relative before:absolute before:w-full before:left-0 before:bottom-[15%] before:h-[9px] before:bg-secondary before:z-[-1] lg:text-xl xl:text-2xl ;
+    @apply text-lg w-fit font-semibold text-custom-black capitalize  relative before:absolute before:w-full before:left-0 before:bottom-[15%] before:h-[9px] before:bg-secondary before:z-[-1] lg:text-xl xl:text-2xl  ;
 }
 h3{
     @apply text-base capitalize  font-semibold text-custom-black lg:text-lg xl:text-xl ;
@@ -32,18 +35,18 @@ a{
     @apply block w-fit;
 }
 section{
-    @apply py-14;
+    @apply py-14 xl:py-16;
 }
 @layer components{
 
     .button-primary{
-        @apply bg-custom-black text-white  rounded-[10px] h-[50px] min-w-[140px] text-center flex justify-center items-center text-sm font-semibold shadow-primary shadow-[6px_6px_0px_0px] xl:shadow-[8px_8px_0px_0px] xl:shadow-primary xl:text-base xl:h-[60px] xl:min-w-[180px];
+        @apply bg-custom-black capitalize text-white  rounded-[10px] h-[50px] min-w-[140px] text-center flex justify-center items-center text-sm font-semibold shadow-primary shadow-[6px_6px_0px_0px] xl:shadow-[8px_8px_0px_0px] xl:shadow-primary xl:text-base xl:h-[60px] xl:min-w-[180px];
     }
     .button-secondary{
-        @apply bg-secondary  rounded-[8px]  h-[50px] min-w-[120px] text-center flex justify-center items-center text-xs font-medium  xl:text-base xl:h-[60px] xl:min-w-[160px];
+        @apply bg-secondary capitalize  rounded-[8px]  h-[50px] min-w-[120px] text-center flex justify-center items-center text-xs font-medium  xl:text-base xl:h-[60px] xl:min-w-[160px];
     }
     .button-muted{
-        @apply bg-muted  rounded-[4px]  h-[50px] min-w-[120px] text-center flex justify-center items-center text-sm font-medium  xl:text-base xl:h-[60px] xl:min-w-[160px];
+        @apply bg-muted  capitalize rounded-[4px]  h-[50px] min-w-[120px] text-center flex justify-center items-center text-sm font-medium  xl:text-base xl:h-[60px] xl:min-w-[160px];
     }
     .pagination-button{
         @apply  bg-primary  rounded-[4px] h-[56px] min-w-[56px] text-base font-medium;
@@ -52,6 +55,15 @@ section{
         @apply  bg-muted  rounded-[4px] h-[56px] min-w-[56px] text-base font-medium;
     }
     .page-wrapper{
-        @apply container mx-auto px-4;
+        @apply container mx-auto px-4 md:px-6 lg:px-8 xl:px-10;
+    }
+    .sectionTitleLeft{
+        @apply flex flex-col gap-4 lg:gap-6 xl:gap-8 max-w-[600px];
+    }
+    .sectionTitleCenter{
+        @apply flex flex-col gap-4 items-center text-center  lg:gap-6 xl:gap-8 max-w-[600px];
+    }
+    .twoCol{
+        @apply flex flex-col-reverse md:grid md:grid-cols-2 md:items-center ;
     }
 }

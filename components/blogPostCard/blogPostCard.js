@@ -4,7 +4,7 @@ const BlogPostCard = ({image, category, title, date}) => {
   return (
     <div className={styles.card}>
       <div className={styles.imageHolder}>
-        {image ? <Image src = {image} alt = 'blog image' layout = 'fill' /> : <div className={styles.noImage}>No Image</div>}
+        {image ? <Image src = {image} alt = 'blog image' layout = 'fill' objectFit="cover" /> : <div className={styles.noImage}>No Image</div>}
       </div>
       <div className={styles.contents}>
           <span >{category}</span>

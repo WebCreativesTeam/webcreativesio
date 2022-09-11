@@ -1,0 +1,18 @@
+.card{
+    @apply aspect-[4.1/4.5]  w-[250px] bg-white p-6 flex flex-col items-center justify-center gap-4 xl:gap-6 2xl:gap-8 text-center lg:p-8 xl:p-10 lg:w-[280px] xl:w-[350px] 2xl:w-[420px];
+}
+.card .iconHolder{
+    @apply aspect-square w-[60px] flex items-center justify-center border-white border-solid border-2 shadow-[0px_15px_15px] rounded-[4px] lg:rounded-[6px] xl:rounded-[8px] lg:shadow-[0px_30px_20px] xl:shadow-[0px_43px_30px] xl:w-[70px] 2xl:w-[90px];
+}
+.iconHolder span{
+    @apply block w-1/2;
+}
+.iconHolder span svg{
+    @apply fill-current stroke-current w-full;
+}
+.card>p{
+    @apply line-clamp-3;
+}
+.card a p{
+    @apply mt-auto underline text-custom-black font-medium;
+}

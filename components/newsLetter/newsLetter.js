@@ -3,7 +3,7 @@ import styles from "./newsLetter.module.css";
 const NewsLetter = () => {
   return (
     <section>
-      <div className="relative max-w-[1300px] mx-auto">
+      <div className="relative max-w-[1300px] mx-auto py-14">
         <div className={styles.svgHolder}>
           <svg viewBox="0 0 270 336" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path

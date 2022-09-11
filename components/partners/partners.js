@@ -27,7 +27,7 @@ const Partners = () => {
    ]
 
     return ( 
-        <div className="flex flex-wrap items-center justify-between gap-6">
+        <div className="flex flex-wrap items-center justify-center md:justify-between gap-6 ">
              {partners.map((item, index )=>{
                 return(
                     <div className = 'w-[100px] lg:w-[140px] xl:w-[180px]' key = {index}>
