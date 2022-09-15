@@ -5,7 +5,7 @@
     @apply h-1/2 relative;
 }
 .contents {
-    @apply h-1/2 flex flex-col items-center justify-between p-6 text-center xl:p-8;
+    @apply h-1/2 flex flex-col items-center justify-between p-6 py-4 text-center xl:p-8 xl:py-6;
 }
 .contents > span{
     @apply bg-muted text-xs text-custom-black min-w-[60px] p-2 h-[25px] xl:min-w-[120px] flex items-center justify-center xl:text-sm xl:h-[35px] uppercase;
@@ -13,4 +13,6 @@
 .noImage{
     @apply h-full w-full text-custom-gray flex items-center justify-center ;
 }
-
+ .contents h4{
+    @apply line-clamp-2;
+ }

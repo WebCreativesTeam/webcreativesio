@@ -7,7 +7,7 @@
 .menu{
     @apply z-10 translate-x-full capitalize w-full h-full flex flex-col items-center justify-center gap-5 font-medium text-base bg-white fixed left-0 top-0 transition-transform ease-in-out duration-150 lg:bg-transparent lg:relative lg:h-fit lg:w-fit lg:flex-row  lg:text-sm lg:font-normal  lg:mx-auto lg:transform-none lg:text-custom-gray xl:gap-[44px] xl:text-base  ;
 }
-.menu a{
+.menu>a{
     @apply pb-2 relative  after:w-[0px] hover:after:w-[32px] after:h-[3px] after:absolute after:bottom-0 after:bg-custom-black after:left-1/2 after:-translate-x-1/2 after:rounded-full after:transition-all duration-150 lg:hover:text-custom-black;
 }
 .menuOpen{

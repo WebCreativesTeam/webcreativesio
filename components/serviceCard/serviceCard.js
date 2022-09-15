@@ -6,14 +6,14 @@ import styles from "./serviceCard.module.css";
 const ServiceCard = ({ name, link, details, children, color }) => {
   return (
     <div className={styles.card} >
-      <div className={styles.iconHolder} style = {{color: addAlpha(color, 0.3),  backgroundColor: addAlpha(color,0.2)}}>
-        <span style={{color: color}}>
+      <div className={styles.iconHolder} style = {{color: addAlpha(color ? color: '#808080', 0.3),  backgroundColor: addAlpha(color ? color : '#808080',0.2)}}>
+        <span style={{color: color ? color: 'gray'}}>
         {children}
         </span>
       </div>
       <h4>{name}</h4>
       <p>{details}</p>
-      <Link href={link}>
+      <Link href={link ?link : '#'}>
         <a><p>learn more</p></a>
       </Link>
     </div>

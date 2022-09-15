@@ -30,7 +30,7 @@ const Header = () => {
         </nav>
         
         <Link href = '/getStarted'>
-        <a className="button-primary hidden lg:flex order-3">Say Hi!</a>
+        <span className="button-primary hidden lg:flex order-3 cursor-pointer ">Say Hi!</span>
         </Link>
         <button className={classnames(styles.menuBtn, open && styles.menuBtnOpen)} onClick={() => setOpen(val => !val)}>
           <span></span>

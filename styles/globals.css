@@ -22,17 +22,17 @@ h4{
     @apply text-sm capitalize font-semibold text-custom-black lg:text-base xl:text-lg ;
 }
 p{
-    @apply text-xs capitalize  text-custom-gray lg:text-sm xl:text-base;  
+    @apply text-xs capitalize  text-custom-gray lg:text-sm xl:text-base leading-loose;  
 }
 
 input[type= 'text'],input[type = 'email'], input[type = 'password'], input[type = 'number'] {
-    @apply h-[64] rounded-[4px] w-full text-xs px-[17px] py-[7.5px] xl:px-[34px] xl:py-[15px] focus:outline-none lg:text-sm xl:text-base;
+    @apply h-[54px] rounded-[4px] flex-grow text-xs px-[17px] py-[7.5px] xl:px-[34px] xl:py-[15px] focus:outline-none lg:text-sm xl:text-base;
 }
 textarea{
-    @apply  min-h-[180px] max-h-[180px]  px-[34px] py-[15px] text-xs lg:text-sm xl:text-base;
+    @apply  min-h-[180px] max-h-[180px]  px-[17px] py-[15px] text-xs lg:text-sm xl:text-base focus:outline-none resize-none;
 }
 a{
-    @apply block w-fit;
+    @apply block w-fit text-custom-black;
 }
 section{
     @apply py-14 xl:py-16;
@@ -40,19 +40,19 @@ section{
 @layer components{
 
     .button-primary{
-        @apply bg-custom-black capitalize text-white  rounded-[10px] h-[50px] min-w-[140px] text-center flex justify-center items-center text-sm font-semibold shadow-primary shadow-[6px_6px_0px_0px] xl:shadow-[8px_8px_0px_0px] xl:shadow-primary xl:text-base xl:h-[60px] xl:min-w-[180px];
+        @apply bg-custom-black capitalize text-white px-4 rounded-[10px] h-[50px] min-w-[140px] text-center flex justify-center items-center text-sm font-semibold shadow-primary shadow-[6px_6px_0px_0px] xl:shadow-[8px_8px_0px_0px] xl:shadow-primary xl:text-base xl:h-[60px] lg:px-6 xl:min-w-[180px];
     }
     .button-secondary{
-        @apply bg-secondary capitalize  rounded-[8px]  h-[50px] min-w-[120px] text-center flex justify-center items-center text-xs font-medium  xl:text-base xl:h-[60px] xl:min-w-[160px];
+        @apply bg-secondary capitalize  rounded-[8px] px-4  h-[50px] min-w-[120px] text-center flex justify-center items-center text-xs font-medium  xl:text-base xl:h-[60px] xl:min-w-[160px] lg:px-6;
     }
     .button-muted{
-        @apply bg-muted  capitalize rounded-[4px]  h-[50px] min-w-[120px] text-center flex justify-center items-center text-sm font-medium  xl:text-base xl:h-[60px] xl:min-w-[160px];
+        @apply bg-muted  capitalize rounded-[4px] px-4 h-[50px] min-w-[120px] text-center flex justify-center items-center text-sm font-medium  xl:text-base xl:h-[60px] xl:min-w-[160px] lg:px-6;
     }
     .pagination-button{
-        @apply  bg-primary  rounded-[4px] h-[56px] min-w-[56px] text-base font-medium;
+        @apply  bg-primary  rounded-[4px] min-w-[25px] h-[40px] px-4  xl:h-[56px] xl:min-w-[56px] text-sm xl:text-base font-medium xl:px-6 capitalize;
     }
     .pagination-button-muted{
-        @apply  bg-muted  rounded-[4px] h-[56px] min-w-[56px] text-base font-medium;
+        @apply  bg-muted  rounded-[4px] min-w-[25px] h-[40px] px-4  xl:h-[56px] xl:min-w-[56px] text-sm xl:text-base font-medium xl:px-6 capitalize;
     }
     .page-wrapper{
         @apply container mx-auto px-4 md:px-6 lg:px-8 xl:px-10;
@@ -61,9 +61,12 @@ section{
         @apply flex flex-col gap-4 lg:gap-6 xl:gap-8 max-w-[600px];
     }
     .sectionTitleCenter{
-        @apply flex flex-col gap-4 items-center text-center  lg:gap-6 xl:gap-8 max-w-[600px];
+        @apply flex flex-col gap-4 items-center text-center mx-auto  lg:gap-6 xl:gap-8 max-w-[600px];
     }
-    .twoCol{
-        @apply flex flex-col-reverse md:grid md:grid-cols-2 md:items-center ;
+    .twoColGrid{
+        @apply flex flex-col md:grid md:grid-cols-2 md:items-center ;
+    }
+    .twoColGridContents{
+        @apply flex flex-col gap-4 lg:gap-6 xl:gap-8 max-w-[600px];
     }
 }

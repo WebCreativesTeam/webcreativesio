@@ -68,8 +68,8 @@ export default function Home() {
       </section>
       <Partners />
       <section id = 'intro'>
-        <div className="twoCol">
-          <div className="sectionTitleLeft">
+        <div className="twoColGrid flex-col-reverse">
+          <div className="twoColGridContents ">
             <h2>
               Solution for <br /> every business needs
             </h2>
@@ -167,7 +167,7 @@ export default function Home() {
        </div>
       </SectionLayout>
       <SectionLayout id ='blogs' title  = 'our blogs' description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.'} element = {<Anchor href = '/blogs' />}>
-        <div className="flex flex-row justify-center items-center gap-4 flex-wrap lg:justify-between  lg:gap-6 xl:gap-8">
+        <div className="flex flex-row justify-center items-center gap-6 flex-wrap lg:justify-between  xl:gap-8">
           <BlogPostCard title = {'Best Design Tips You Will Read This Year'} image = '/images/blogs/blog1.png' category={'travel'} date = '10-9-2022'/>
           <BlogPostCard title = {'Best Design Tips You Will Read This Year'} image = '/images/blogs/blog2.png' category={'development'} date = '10-9-2022'/>
           <BlogPostCard title = {'Best Design Tips You Will Read This Year'} image = '/images/blogs/blog3.png' category={'seo'} date = '10-9-2022'/>

@@ -1,5 +1,5 @@
 .footer{
-    @apply bg-primary text-custom-black py-14 px-6 text-center;
+    @apply bg-primary text-custom-black py-14 px-6 text-center ;
 }
 .menu{
     @apply capitalize w-full flex flex-col items-center justify-center gap-1 font-medium text-sm md:flex-row md:gap-6   xl:gap-[44px] xl:text-base   ;

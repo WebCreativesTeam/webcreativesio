@@ -8,7 +8,7 @@
     @apply block w-1/2;
 }
 .iconHolder span svg{
-    @apply fill-current stroke-current w-full;
+    @apply fill-current stroke-transparent w-full;
 }
 .card>p{
     @apply line-clamp-3;
