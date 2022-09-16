@@ -110,7 +110,7 @@ export default function Home() {
           link="/services"
           name={"App Design"}
           details="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim."
-          color="#8CE1EB"
+          color="#26C6DA"
         >
           <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -127,7 +127,7 @@ export default function Home() {
           link="/services"
           name={"Web Development"}
           details="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim."
-          color="#D9A4FC"
+          color="#FF733B"
         >
           <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -144,7 +144,7 @@ export default function Home() {
           link="/services"
           name={"Web Design"}
           details="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim."
-          color="#FD907E"
+          color="#BE63F9"
         >
           <svg viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
             <path

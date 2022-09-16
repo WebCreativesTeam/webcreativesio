@@ -6,7 +6,7 @@ import styles from "./serviceCard.module.css";
 const ServiceCard = ({ name, link, details, children, color }) => {
   return (
     <div className={styles.card} >
-      <div className={styles.iconHolder} style = {{color: addAlpha(color ? color: '#808080', 0.3),  backgroundColor: addAlpha(color ? color : '#808080',0.2)}}>
+      <div className={styles.iconHolder} style = {{color: addAlpha(color ? color: '#808080', 0.15),  backgroundColor: addAlpha(color ? color : '#808080',0.1)}}>
         <span style={{color: color ? color: 'gray'}}>
         {children}
         </span>

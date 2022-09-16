@@ -1,7 +1,7 @@
 const PageTitleSection = ({title, sub}) => {
   return (
     <section className="relative lg:h-[300px] xl:h-[350px]">
-      <svg className="absolute top-0 w-full h-full" viewBox="0 0 1320 353" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg className="absolute top-0 w-full h-full z-[-1]" viewBox="0 0 1320 353" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M222.864 116.748C214.531 116.748 207.746 109.919 207.746 101.532C207.746 93.1456 214.531 86.3164 222.864 86.3164C231.196 86.3164 237.981 93.1456 237.981 101.532C237.994 109.919 231.209 116.748 222.864 116.748ZM222.864 87.9503C215.432 87.9503 209.382 94.0392 209.382 101.519C209.382 109 215.432 115.101 222.864 115.101C230.308 115.101 236.358 109.012 236.358 101.519C236.358 94.0392 230.308 87.9503 222.864 87.9503Z"
           fill="#FFC04D"
@@ -125,7 +125,7 @@ const PageTitleSection = ({title, sub}) => {
           fillOpacity="0.8"
         />
       </svg>
-      <div className="flex flex-col gap-2 items-center ">
+      <div className="flex flex-col gap-2 items-center text-center ">
         <h1>{title}</h1>
         <p>{sub}</p>
       </div>

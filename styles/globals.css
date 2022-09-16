@@ -13,7 +13,7 @@ h1{
     @apply text-xl font-semibold capitalize  text-custom-black lg:text-2xl xl:text-3xl;
 }
 h2{
-    @apply text-lg w-fit font-semibold text-custom-black capitalize  relative before:absolute before:w-full before:left-0 before:bottom-[15%] before:h-[9px] before:bg-secondary before:z-[-1] lg:text-xl xl:text-2xl  ;
+    @apply text-lg w-fit font-semibold text-custom-black capitalize  relative before:absolute before:w-full before:left-0 before:bottom-[15%] before:h-[9px] before:bg-secondary before:z-[-1] lg:text-xl xl:text-2xl min-w-[150px] md:min-w-[200px] lg:min-w-[250px] ;
 }
 h3{
     @apply text-base capitalize  font-semibold text-custom-black lg:text-lg xl:text-xl ;
