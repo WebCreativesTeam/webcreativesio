@@ -1,5 +1,10 @@
 export default function LightenDarkenColor(col, amt) {
-  
+    let alpha = ''
+    if(col.length > 7){
+        alpha = col.slice(-2)
+        col = col.slice(0, -2)
+        alpha = Math.floor(parseInt(alpha)*1.8)
+    }
     var usePound = false;
   
     if (col[0] == "#") {
@@ -23,7 +28,8 @@ export default function LightenDarkenColor(col, amt) {
  
     if (g > 255) g = 255;
     else if (g < 0) g = 0;
- 
-    return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16);
+
+    if(alpha) return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16) + alpha ;
+    return (usePound?"#":"") + (g | (b << 8) | (r << 16)).toString(16)  ;
   
 }
