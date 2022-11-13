@@ -33,7 +33,7 @@ const TeamMember =({image, name, role}) =>{
 return(
     <div className="flex flex-col gap-2 items-center ">
         <div className="relative min-w-[100px] w-2/3 aspect-square rounded-full overflow-hidden mix-blend-luminosity md:w-[120px] mb-4 lg:mb-6 lg:w-[160px] xl:w-[200px] 2xl:w-[240px]">
-            <Image src = {image} layout = 'fill' objectFit="cover" objectPosition='top' alt = 'member'/>
+            <Image src = {image} fill = {true} className = 'object-cover object-top' alt = 'member'/>
         </div>
         <h4>{name}</h4>
         <p>{role}</p>
@@ -71,8 +71,8 @@ const AboutUs = () => {
                 <p>Days of Work</p>
               </div>
             </div>
-            <Link href="/">
-              <a className="button-secondary">Learn More</a>
+            <Link href="/" className="button-secondary">
+              Learn More
             </Link>
           </div>
         </div>

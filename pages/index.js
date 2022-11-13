@@ -33,8 +33,8 @@ const SectionLayout = ({children, id, title,description, element}) =>{
 }
 const Anchor = ({href}) =>{
   return(
-    <Link href = {href}>
-      <a className="button-muted">see more</a>
+    <Link className="button-muted" href = {href}>
+      see more
     </Link>
   )
 }
@@ -53,16 +53,16 @@ export default function Home() {
               <span>Your Business Deserves</span>
             </h1>
             <div className="flex gap-4 justify-center">
-              <Link href="/getStarted">
-                <a className="button-primary ">get started</a>
+              <Link className="button-primary " href="/getStarted">
+                get started
               </Link>
-              <Link href="/services">
-                <a className="button-primary bg-transparent border border-custom-gray/20 text-custom-black shadow-none">How It works</a>
+              <Link href="/services" className="button-primary bg-transparent border border-custom-gray/20 text-custom-black shadow-none">
+                How It works
               </Link>
             </div>
           </div>
           <div className="absolute bottom-0 w-[590px] md:w-full  left-1/2 -translate-x-1/2 z-[-1] ">
-            <Image src={bannerIllustration} alt="banner image" layout="responsive" priority />
+            <Image src={bannerIllustration} alt="banner image" className="w-full" priority />
           </div>
         </div>
       </section>

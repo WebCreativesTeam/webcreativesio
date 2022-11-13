@@ -7,7 +7,7 @@ const ProjectCard = ({title,image, bg}) => {
         <div className={styles.card} style = {{backgroundColor: `${bg}`}}>
              <h3>{title}</h3>
              <div className = {styles.imageHolder} style = {{color:LightenDarkenColor(bg, -50)}} >
-             <Image src = {image} alt = 'project image' layout='fill' objectFit='cover' objectPosition='top' />
+             <Image src = {image} alt = 'project image' fill = {true} className = 'object-cover object-top'/>
              </div>
         </div>
      );

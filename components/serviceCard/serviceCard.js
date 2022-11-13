@@ -14,7 +14,7 @@ const ServiceCard = ({ name, link, details, children, color }) => {
       <h4>{name}</h4>
       <p>{details}</p>
       <Link href={link ?link : '#'}>
-        <a><p>learn more</p></a>
+        <p>learn more</p>
       </Link>
     </div>
   );

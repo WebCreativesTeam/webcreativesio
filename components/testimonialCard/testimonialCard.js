@@ -8,7 +8,7 @@ const TestimonialCard = ({ image, name, role, review, rating ,color}) => {
     <div className={styles.cardHolder}>
       <div className={styles.card} style = {{backgroundColor: addAlpha(color, 0.15)}}>
       <div className={styles.imageHolder} style = {{color: color}}>
-      <Image src={image} alt="customer" layout="fill" objectFit="cover" objectPosition='top'/>
+      <Image src={image} alt="customer" fill = {true} className = 'object-cover object-top'/>
       </div>
       <div>
       <h4>{name}</h4>

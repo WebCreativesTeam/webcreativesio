@@ -22,9 +22,9 @@ const Footer = () => {
             {links.map(link => {
               return (
                 <Link href={link.route} key={link.label}>
-                  <a onClick={() => setOpen(false)} className={link?.class}>
+                  <div className={link?.class}>
                     {link.label}
-                  </a>
+                  </div>
                 </Link>
               );
             })}

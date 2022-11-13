@@ -22,15 +22,15 @@ const Header = () => {
         <nav className={classnames(styles.menu, open && styles.menuOpen)} >
           {links.map(link =>{
                return(
-                    <Link  href = {link.route} key = {link.label}>
-                    <a onClick={() => setOpen(false)} className={link?.class}>{link.label}</a>
+                    <Link  href = {link.route} key = {link.label} onClick={() => setOpen(false)} className={link?.class}>
+                    {link.label}
                </Link>
                )
           })}
         </nav>
         
-        <Link href = '/getStarted'>
-        <span className="button-primary hidden lg:flex order-3 cursor-pointer ">Say Hi!</span>
+        <Link href = '/getStarted' className="button-primary hidden lg:flex order-3 cursor-pointer ">
+       Say Hi!
         </Link>
         <button className={classnames(styles.menuBtn, open && styles.menuBtnOpen)} onClick={() => setOpen(val => !val)}>
           <span></span>

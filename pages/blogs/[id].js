@@ -8,4 +8,4 @@ const BlogPost = () => {
      );
 }
  
-export default SingleBlog;
+export default BlogPost;
