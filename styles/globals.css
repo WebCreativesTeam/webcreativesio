@@ -6,7 +6,7 @@
     @apply overflow-x-hidden;
 }
 body{
-    @apply font-poppins  bg-[url(/images/bgImage.svg)] bg-cover transfrom-gpu;
+    @apply font-poppins  bg-[url(/images/bgImage.svg)] bg-cover transform-gpu;
 }
 
 h1{
