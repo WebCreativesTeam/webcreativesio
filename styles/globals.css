@@ -8,6 +8,9 @@
 body{
     @apply font-poppins bg-gradient-to-br from-yellow-100  via-green-50 to-orange-100 lg:bg-[url(/images/bgImage.svg)] lg:bg-cover ;
 }
+body[data-menu = 'open' ]{
+  @apply h-full overflow-hidden;
+}
 
 h1{
     @apply text-xl font-semibold capitalize  text-custom-black lg:text-2xl xl:text-3xl;

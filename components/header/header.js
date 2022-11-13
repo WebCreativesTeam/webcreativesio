@@ -3,6 +3,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import styles from "./header.module.css";
 import classnames from "classnames";
+import {motion} from 'framer-motion'
+
 const Header = () => {
   const [open, setOpen] = useState(false);
   const links = [
@@ -13,6 +15,38 @@ const Header = () => {
      {label: 'projects', route: '/projects', class: ''},
      {label: 'Say Hi!', route: '/getStarted', class: 'button-primary lg:hidden'},
   ]
+  
+  const variants = {
+      visible: {
+        x: 0,
+        opacity: 1,
+        
+        transition: {
+          type: 'tween',
+           duration: 0.3,
+           ease: 'easeOut'
+        }
+      },
+      hidden: {
+        x: 100,
+        opacity:0,
+      
+      }
+  }
+  const parentVariant = {
+    visible: {
+      transition: {
+        staggerChildren: 0.05,
+         delayChildren: 0.25,
+      }
+    },
+   
+    
+  }
+   useEffect(() =>{
+      const body = document.querySelector('body')
+       body.dataset.menu = open ? 'open': 'close'
+   })
   return (
     <header>
       <div className={classnames(styles.headerWrapper,'page-wrapper')}>
@@ -20,13 +54,19 @@ const Header = () => {
         <Logo />
         </div>
         <nav className={classnames(styles.menu, open && styles.menuOpen)} >
+          <motion.div animate = {open? 'visible':'hidden'} variants = {parentVariant}  >
           {links.map(link =>{
                return(
-                    <Link  href = {link.route} key = {link.label} onClick={() => setOpen(false)} className={link?.class}>
+                  
+                    <motion.div variants={variants} key = {link.label}>
+                      <Link   href = {link.route} onClick={() => setOpen(false)} className={link?.class}>
                     {link.label}
-               </Link>
+                    </Link>
+                    </motion.div>
+              
                )
           })}
+          </motion.div>
         </nav>
         
         <Link href = '/getStarted' className="button-primary hidden lg:flex order-3 cursor-pointer ">

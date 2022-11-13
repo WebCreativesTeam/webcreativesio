@@ -2,7 +2,7 @@
     @apply bg-primary text-custom-black py-14 px-6 text-center ;
 }
 .menu{
-    @apply capitalize w-full flex flex-col items-center justify-center gap-1 font-medium text-sm md:flex-row md:gap-6   xl:gap-[44px] xl:text-base   ;
+    @apply capitalize w-full flex flex-col items-center justify-center gap-4 font-medium text-sm md:flex-row md:gap-6   xl:gap-[44px] xl:text-base   ;
 }
 .menu a{
     @apply pb-2 relative  after:w-[0px] hover:after:w-[32px] after:h-[3px] after:absolute after:bottom-0 after:bg-custom-black after:left-1/2 after:-translate-x-1/2 after:rounded-full after:transition-all duration-150 lg:hover:text-custom-black;
@@ -21,7 +21,7 @@
     @apply w-[25px]  xl:w-[30px];
 }
 .content{
-    @apply flex flex-col items-center gap-6 lg:gap-8 xl:gap-10;
+    @apply flex flex-col items-center gap-8 xl:gap-10;
 }
 .content hr{
     @apply border-t border-custom-gray block w-full;
