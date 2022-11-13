@@ -6,7 +6,7 @@
     @apply overflow-x-hidden;
 }
 body{
-    @apply font-poppins  bg-[url(/images/bgImage.svg)] bg-cover transform-gpu;
+    @apply font-poppins bg-gradient-to-br from-yellow-100  via-green-50 to-orange-100 lg:bg-[url(/images/bgImage.svg)] lg:bg-cover ;
 }
 
 h1{
