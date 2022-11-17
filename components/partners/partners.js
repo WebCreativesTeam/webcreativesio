@@ -1,4 +1,5 @@
 import Image from "next/image";
+import {motion} from 'framer-motion'
 import partener1 from 'public/images/partners/partner1.png'
 import partener2 from 'public/images/partners/partner2.png'
 import partener3 from 'public/images/partners/partner3.png'
@@ -25,17 +26,34 @@ const Partners = () => {
     },
    
    ]
+  
+   const variants = {
+    visible:{
+      y: 0,
+      opacity: 1,
+      transition:{
+        type: 'spring', 
+        duration: 0.5,
+        stiffness: 100,
+        
+      }
+    },
+    hidden: {
+      y: 100, 
+      opacity: 0
+    }, 
+   }
 
     return ( 
-        <div className="flex flex-wrap items-center justify-center md:justify-between gap-6 ">
+        <motion.div initial = "hidden" animate='visible' transition = {{staggerChildren: 0.1, }} viewport = {{ margin: '50%'}} className="flex flex-wrap items-center justify-center md:justify-between gap-6 ">
              {partners.map((item, index )=>{
                 return(
-                    <div className = 'w-[100px] lg:w-[140px] xl:w-[180px]' key = {index}>
+                    <motion.div variants={variants} className = 'w-[100px] lg:w-[140px] xl:w-[180px]' key = {index}>
                         <Image src = {item.image} alt = {item.name}/>
-                    </div>
+                    </motion.div>
                 )
              })}
-        </div>
+        </motion.div>
      );
 }
  

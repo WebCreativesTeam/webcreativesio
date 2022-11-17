@@ -9,6 +9,8 @@ import ServiceCard from "components/serviceCard/serviceCard";
 import BlogPostCard from "components/blogPostCard/blogPostCard";
 import NewsLetter from "components/newsLetter/newsLetter";
 import ProjectCard from "components/projectCard/projectCard";
+import {motion} from 'framer-motion'
+
 
 const SectionLayout = ({children, id, title,description, element}) =>{
   return(
@@ -40,6 +42,43 @@ const Anchor = ({href}) =>{
 }
 
 export default function Home() {
+
+  const buttonVariants  = {
+    visible: {
+     opacity: 1,
+     y: '0%',
+     transition: {
+       type: 'spring',
+       duration: 0.5,
+       stiffness: 100,
+     }
+    },
+    hidden:{
+        opacity: 0,
+        y: '50%'
+    },
+   
+ }
+
+ const serviceCardVariants = {
+  hidden: {
+      y:  100,
+      opacity: 0,
+      filter: 'blur(10px)',
+  },
+  visible: {
+    y:0,
+    opacity: 1,
+    filter: 'blur(0px)',
+    transition: {
+      type: 'spring',
+      duration: 1, 
+      ease: 'easeOut'
+      
+    }
+  }
+ }
+ 
   return (
     <>
       <section id = "banner">
@@ -52,14 +91,18 @@ export default function Home() {
               <br />
               <span>Your Business Deserves</span>
             </h1>
-            <div className="flex gap-4 justify-center">
+            <motion.div initial = {'hidden'} animate={'visible'} transition = {{staggerChildren: 0.2}} className="flex gap-4 justify-center">
+              <motion.div variants={buttonVariants} >
               <Link className="button-primary " href="/getStarted">
                 get started
               </Link>
+              </motion.div>
+              <motion.div variants={buttonVariants}  >
               <Link href="/services" className="button-primary bg-transparent border border-custom-gray/20 text-custom-black shadow-none">
                 How It works
               </Link>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
           <div className="absolute bottom-0 w-[590px] md:w-full  left-1/2 -translate-x-1/2 z-[-1] ">
             <Image src={bannerIllustration} alt="banner image" className="w-full" priority />
@@ -105,7 +148,8 @@ export default function Home() {
         </div>
       </section>
       <SectionLayout id = 'services' title  ={'What we provide'} description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.'} element = {<Anchor href = '/services' />}>
-      <div className="flex flex-row justify-center items-center gap-4 flex-wrap lg:justify-between  lg:gap-6 xl:gap-8">
+      <motion.div initial = 'hidden' whileInView ='visible' transition={{staggerChildren: 0.2}} viewport = {{margin: '-50%', once: true}} className="flex flex-row justify-center items-center gap-4 flex-wrap lg:justify-between  lg:gap-6 xl:gap-8">
+       <motion.div  variants={serviceCardVariants} >
         <ServiceCard
           link="/services"
           name={"App Design"}
@@ -123,6 +167,8 @@ export default function Home() {
             />
           </svg>
         </ServiceCard>
+        </motion.div>
+        <motion.div  variants={serviceCardVariants} >
         <ServiceCard
           link="/services"
           name={"Web Development"}
@@ -140,6 +186,8 @@ export default function Home() {
             />
           </svg>
         </ServiceCard>
+        </motion.div>
+        <motion.div   variants={serviceCardVariants} >
         <ServiceCard
           link="/services"
           name={"Web Design"}
@@ -157,7 +205,8 @@ export default function Home() {
             />
           </svg>
         </ServiceCard>
-      </div>
+        </motion.div>
+      </motion.div>
       </SectionLayout>
       <SectionLayout id = 'projects' title = 'our projects' description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.'} element ={<Anchor href = '/projects' />}>
        

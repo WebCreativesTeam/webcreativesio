@@ -4,9 +4,11 @@ import { useEffect, useState } from "react";
 import styles from "./header.module.css";
 import classnames from "classnames";
 import {motion} from 'framer-motion'
+import { useMediaQuery } from "util/useMedia";
 
 const Header = () => {
   const [open, setOpen] = useState(false);
+  const isDesktop = useMediaQuery(1024)
   const links = [
      {label: 'Home', route: '/', class: ''},
      {label: 'about us', route: '/aboutUs', class: ''},
@@ -16,28 +18,28 @@ const Header = () => {
      {label: 'Say Hi!', route: '/getStarted', class: 'button-primary lg:hidden'},
   ]
   
-  const variants = {
+  const variants = !isDesktop && {
       visible: {
         x: 0,
         opacity: 1,
         
         transition: {
-          type: 'tween',
-           duration: 0.3,
+           type: 'spring',
+           stiffness: 80,
+           duration: 0.2,
            ease: 'easeOut'
         }
       },
       hidden: {
         x: 100,
         opacity:0,
-      
       }
   }
-  const parentVariant = {
+  const parentVariant =  {
     visible: {
       transition: {
         staggerChildren: 0.05,
-         delayChildren: 0.25,
+         delayChildren: 0.20,
       }
     },
    
@@ -54,11 +56,11 @@ const Header = () => {
         <Logo />
         </div>
         <nav className={classnames(styles.menu, open && styles.menuOpen)} >
-          <motion.div animate = {open? 'visible':'hidden'} variants = {parentVariant}  >
+          <motion.div   animate = {!isDesktop && open  ? 'visible':'hidden'} variants = {parentVariant}  >
           {links.map(link =>{
                return(
                   
-                    <motion.div variants={variants} key = {link.label}>
+                    <motion.div  variants={variants} key = {link.label}>
                       <Link   href = {link.route} onClick={() => setOpen(false)} className={link?.class}>
                     {link.label}
                     </Link>
