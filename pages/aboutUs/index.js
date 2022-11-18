@@ -4,7 +4,7 @@ import styles from "styles/aboutUs.module.css";
 import illustration from "public/images/illustrations/aboutUs.png";
 import Image from "next/image";
 import Link from "next/link";
-
+import {motion} from 'framer-motion'
 
 const teamMembersList =[
     {
@@ -30,14 +30,31 @@ const teamMembersList =[
 ]
 
 const TeamMember =({image, name, role}) =>{
+  const fadeInFromBottom = {
+    hidden: {
+        y:  50,
+        opacity: 0,
+    },
+    visible: {
+      y:0,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        duration: 1, 
+        ease: 'easeOut',
+        staggerChildren: 0.2,
+        stiffness: 70,
+      }
+    }
+   }
 return(
-    <div className="flex flex-col gap-2 items-center ">
-        <div className="relative min-w-[100px] w-2/3 aspect-square rounded-full overflow-hidden mix-blend-luminosity md:w-[120px] mb-4 lg:mb-6 lg:w-[160px] xl:w-[200px] 2xl:w-[240px]">
+    <motion.div variants={fadeInFromBottom} className="flex flex-col gap-2 items-center ">
+        <motion.div variants={fadeInFromBottom} className="relative min-w-[100px] w-2/3 aspect-square rounded-full overflow-hidden  md:w-[120px] mb-4 lg:mb-6 lg:w-[160px] xl:w-[200px] 2xl:w-[240px]" >
             <Image src = {image} fill = {true} className = 'object-cover object-top' alt = 'member'/>
-        </div>
-        <h4>{name}</h4>
-        <p>{role}</p>
-    </div>
+        </motion.div>
+        <motion.h4 variants={fadeInFromBottom}>{name}</motion.h4>
+        <motion.p variants={fadeInFromBottom}>{role}</motion.p>
+    </motion.div>
 )
 }
 
@@ -87,11 +104,11 @@ const AboutUs = () => {
           <h2>Our Team Members</h2>
           <p>Praesent placerated egestas egestas cras rhone magna rutrum tellus laoreet</p>
         </div>
-        <div className="grid grid-cols-2 gap-4 my-8 md:my-12 lg:my-14 xl:my-16 2xl:my-20 md:flex md:justify-between ">
+        <motion.div initial = 'hidden' whileInView = 'visible' transition={{staggerChildren: 0.2}} viewport = {{once: true, margin: '-50%'}} className="grid grid-cols-2 gap-4 my-8 md:my-12 lg:my-14 xl:my-16 2xl:my-20 md:flex md:justify-between ">
           {teamMembersList.map((member, index) =>{
             return (<TeamMember {...member} key ={index}/>)
           })}
-        </div>
+        </motion.div>
       </section>
     </div>
   );

@@ -2,7 +2,7 @@ import BlogPostCard from "components/blogPostCard/blogPostCard";
 import NewsLetter from "components/newsLetter/newsLetter";
 import PageTitleSection from "components/pageTitleSection/pageTitleSection";
 import styles from "styles/blogs.module.css";
-
+import {motion} from 'framer-motion'
 const blogList = [
   {
     title: "Best Design Tips You Will Read This Year",
@@ -57,11 +57,11 @@ const Blogs = () => {
           <h2>Our Blogs</h2>
           <p>Praesent placerated egestas egestas cras rhone magna rutrum tellus laoreet</p>
         </div>
-        <div className="flex flex-wrap gap-6 items-center justify-center lg:gap-6 xl:gap-8 mt-14 xl:mt-16">
+        <motion.div initial = 'hidden' whileInView='visible' transition={{staggerChildren: 0.2}} viewport = {{once:true, margin: '-50%'}} className="flex flex-wrap gap-6 items-center justify-center lg:gap-6 xl:gap-8 mt-14 xl:mt-16">
           {blogList.map((blog, index) => {
             return <BlogPostCard {...blog} key={index} />;
           })}
-        </div>
+        </motion.div>
         <div className="flex items-center justify-center gap-4 mt-8 xl:mt-10">
             <button className="pagination-button">1</button>
             <button className="pagination-button-muted">2</button>

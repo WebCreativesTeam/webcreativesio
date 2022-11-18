@@ -4,6 +4,7 @@ import ServiceCard from "components/serviceCard/serviceCard";
 import Image from "next/image";
 import servicesIllustration from 'public/images/illustrations/services.svg'
 import styles from "styles/services.module.css";
+import {motion} from 'framer-motion'
 const Services = () => {
   return (
     <div>
@@ -25,7 +26,7 @@ const Services = () => {
           <h2>What We Provide</h2>
           <p>Praesent placerated egestas egestas cras rhone magna rutrum tellus laoreet</p>
         </div>
-        <div className="flex flex-row justify-center items-center gap-4 flex-wrap mt-14 xl:mt-16   lg:gap-6 xl:gap-8">
+        <motion.div initial = 'hidden' whileInView='visible' transition={{staggerChildren: 0.2}} viewport = {{once:true, margin: '-50%'}} className="flex flex-row justify-center items-center gap-4 flex-wrap mt-14 xl:mt-16   lg:gap-6 xl:gap-8">
           <ServiceCard link="/services" name={"App Design"} details="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim." color="#26C6DA">
             <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M42.7326 13.1937L33.3544 10.0021C33.0758 9.90555 32.773 9.90555 32.4916 10.0021L23.1134 13.1937C22.5695 13.3787 22.2051 13.891 22.2051 14.465V21.65C22.2051 30.4202 31.9825 34.6792 32.4005 34.8589C32.5693 34.9286 32.7462 34.9662 32.923 34.9662C33.0999 34.9662 33.2794 34.9313 33.4455 34.8589C33.8635 34.6792 43.641 30.4175 43.641 21.6474V14.4623C43.641 13.891 43.2766 13.3787 42.7326 13.1937ZM38.7938 19.9738L33.8823 26.2309C33.5822 26.6144 33.1374 26.8585 32.6524 26.9068C32.5961 26.9121 32.5345 26.9148 32.4782 26.9148C32.0549 26.9148 31.6396 26.7646 31.3153 26.4857L28.1884 23.8037C27.4381 23.16 27.3497 22.0336 27.9954 21.2826C28.6385 20.5343 29.7666 20.4458 30.5142 21.0895L32.2264 22.5566L35.9884 17.7665C36.5966 16.9914 37.7193 16.8546 38.4964 17.4661C39.2681 18.0749 39.4047 19.1987 38.7938 19.9738Z" />
@@ -79,7 +80,7 @@ const Services = () => {
               <path d="M39.3659 27.7056C35.7913 27.7056 28.6394 31.7141 25.0622 31.7141C21.4876 31.7141 17.4652 29.2895 17.4652 29.2895C17.4652 29.2895 22.2813 30.0803 25.0622 30.0803C27.8457 30.0803 28.6368 29.2396 28.6368 28.1022C28.6368 25.3309 23.3218 24.9011 20.6348 24.5401C17.9961 23.2388 16.6258 22.2105 12.2548 21.8828C12.228 22.1084 12.1877 22.3316 12.118 22.5572L8.52734 33.7658C12.5954 35.4044 19.5997 37.9999 23.2762 37.9999C28.6394 37.9999 42.9432 31.6666 42.9432 30.085C42.9405 28.4964 41.1545 27.7056 39.3659 27.7056Z" />
             </svg>
           </ServiceCard>
-        </div>
+        </motion.div>
         <div className="flex items-center justify-center gap-4 mt-8 xl:mt-10 2xl:mt-12">
           <button className="pagination-button">1</button>
           <button className="pagination-button-muted">2</button>
