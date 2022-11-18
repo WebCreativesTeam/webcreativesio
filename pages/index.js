@@ -60,25 +60,6 @@ export default function Home() {
    
  }
 
- const serviceCardVariants = {
-  hidden: {
-      y:  100,
-      opacity: 0,
-      filter: 'blur(10px)',
-  },
-  visible: {
-    y:0,
-    opacity: 1,
-    filter: 'blur(0px)',
-    transition: {
-      type: 'spring',
-      duration: 1, 
-      ease: 'easeOut'
-      
-    }
-  }
- }
- 
   return (
     <>
       <section id = "banner">
@@ -149,7 +130,7 @@ export default function Home() {
       </section>
       <SectionLayout id = 'services' title  ={'What we provide'} description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.'} element = {<Anchor href = '/services' />}>
       <motion.div initial = 'hidden' whileInView ='visible' transition={{staggerChildren: 0.2}} viewport = {{margin: '-50%', once: true}} className="flex flex-row justify-center items-center gap-4 flex-wrap lg:justify-between  lg:gap-6 xl:gap-8">
-       <motion.div  variants={serviceCardVariants} >
+
         <ServiceCard
           link="/services"
           name={"App Design"}
@@ -167,8 +148,8 @@ export default function Home() {
             />
           </svg>
         </ServiceCard>
-        </motion.div>
-        <motion.div  variants={serviceCardVariants} >
+     
+    
         <ServiceCard
           link="/services"
           name={"Web Development"}
@@ -186,8 +167,8 @@ export default function Home() {
             />
           </svg>
         </ServiceCard>
-        </motion.div>
-        <motion.div   variants={serviceCardVariants} >
+      
+      
         <ServiceCard
           link="/services"
           name={"Web Design"}
@@ -205,29 +186,33 @@ export default function Home() {
             />
           </svg>
         </ServiceCard>
-        </motion.div>
+      
       </motion.div>
       </SectionLayout>
       <SectionLayout id = 'projects' title = 'our projects' description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.'} element ={<Anchor href = '/projects' />}>
        
-       <div className="flex flex-row justify-center items-center gap-4 flex-wrap lg:justify-between  lg:gap-6 xl:gap-8">
+       <motion.div initial = 'hidden' whileInView ='visible' transition={{staggerChildren: 0.2}} viewport = {{margin: '-50%', once: true}} className="flex flex-row justify-center items-center gap-4 flex-wrap lg:justify-between  lg:gap-6 xl:gap-8">
+       
        <ProjectCard title ='Watch - Product Responsive Landing Page' image  = '/images/projects/projectImage1.png' bg = '#F5E6FE'/>
+      
+       
        <ProjectCard title ='Watch - Product Responsive Landing Page' image  = '/images/projects/projectImage2.png' bg = '#F4ECE0'/>
-       </div>
+       
+       </motion.div>
       </SectionLayout>
       <SectionLayout id ='blogs' title  = 'our blogs' description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.'} element = {<Anchor href = '/blogs' />}>
-        <div className="flex flex-row justify-center items-center gap-6 flex-wrap lg:justify-between  xl:gap-8">
+        <motion.div initial = 'hidden' whileInView='visible' transition={{staggerChildren: 0.2}} viewport = {{margin: '-50%', once: true}} className="flex flex-row justify-center items-center gap-6 flex-wrap lg:justify-between  xl:gap-8">
           <BlogPostCard title = {'Best Design Tips You Will Read This Year'} image = '/images/blogs/blog1.png' category={'travel'} date = '10-9-2022'/>
           <BlogPostCard title = {'Best Design Tips You Will Read This Year'} image = '/images/blogs/blog2.png' category={'development'} date = '10-9-2022'/>
           <BlogPostCard title = {'Best Design Tips You Will Read This Year'} image = '/images/blogs/blog3.png' category={'seo'} date = '10-9-2022'/>
-        </div>
+        </motion.div>
       </SectionLayout>
       <SectionLayout id = 'testimonials' title = 'Customer Feedback' description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.'} element ={<div></div>}>
          
-           <div className="flex flex-col items-center md:flex-row md:justify-between gap-4 lg:gap-6 xl:gap-8">
+           <motion.div initial = 'hidden' whileInView='visible' transition={{staggerChildren: 0.2}} viewport = {{margin: '-50%', once: true}} className="flex flex-col items-center md:flex-row md:justify-between gap-4 lg:gap-6 xl:gap-8">
            <TestimonialCard image ='/images/testimonials/review1.png' name = 'name1' role='designer' review = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.' rating = {4} color = '#FFF80A' />
           <TestimonialCard image ='/images/testimonials/review1.png' name = 'name1' role='designer' review = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.' rating = {4} color = '#26C6DA' />
-           </div>
+           </motion.div>
         
       </SectionLayout>
       <NewsLetter />

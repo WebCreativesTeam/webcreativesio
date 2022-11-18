@@ -11,3 +11,6 @@
 .inputField{
     @apply flex items-center p-1 bg-white rounded-[8px] shadow-[0px_15px_15px_rgba(156,45,0,0.09)] w-full xl:shadow-[0px_30px_48px_rgba(156,45,0,0.09)];
 }
+.inputField input{
+    @apply overflow-hidden;
+}

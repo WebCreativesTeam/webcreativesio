@@ -50,7 +50,7 @@ const Header = () => {
        body.dataset.menu = open ? 'open': 'close'
    })
   return (
-    <header>
+    <header className="sticky top-0 left-0">
       <div className={classnames(styles.headerWrapper,'page-wrapper')}>
         <div className={classnames(styles.logo)}>
         <Logo />

@@ -26,6 +26,15 @@ const Partners = () => {
     },
    
    ]
+   const parentVariants = {
+    visible:{
+      transition: {
+        staggerChildren: 0.2,
+
+      },
+    
+    }
+ }
   
    const variants = {
     visible:{
@@ -34,8 +43,8 @@ const Partners = () => {
       transition:{
         type: 'spring', 
         duration: 0.5,
-        stiffness: 100,
-        
+        stiffness: 80,
+       
       }
     },
     hidden: {
@@ -45,7 +54,7 @@ const Partners = () => {
    }
 
     return ( 
-        <motion.div initial = "hidden" animate='visible' transition = {{staggerChildren: 0.1, }} viewport = {{ margin: '50%'}} className="flex flex-wrap items-center justify-center md:justify-between gap-6 ">
+        <motion.div initial = "hidden" whileInView='visible' variants={parentVariants} viewport ={{maring: '-50%', once: true}} className="flex flex-wrap items-center justify-center md:justify-between gap-6 ">
              {partners.map((item, index )=>{
                 return(
                     <motion.div variants={variants} className = 'w-[100px] lg:w-[140px] xl:w-[180px]' key = {index}>

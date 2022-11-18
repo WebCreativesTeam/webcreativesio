@@ -1,9 +1,26 @@
 import styles from "./newsLetter.module.css";
-
+import {motion} from 'framer-motion'
 const NewsLetter = () => {
+  const fadeInFromBottom = {
+    hidden: {
+        y:  70,
+        opacity: 0,
+    },
+    visible: {
+      y:0,
+      opacity: 1,
+      transition: {
+        type: 'spring',
+        duration: 1, 
+        ease: 'easeOut',
+        delayChildren: 0.2,
+        stiffness: 70,
+      }
+    },
+   }
   return (
-    <section>
-      <div className="relative max-w-[1300px] mx-auto py-14">
+    <section id = 'newsletter'>
+      <motion.div initial = 'hidden' whileInView='visible' transition={{staggerChildren: 0.2}} viewport = {{margin: '-50%', once: true}} className="relative max-w-[1300px] mx-auto py-14">
         <div className={styles.svgHolder}>
           <svg viewBox="0 0 270 336" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -23,15 +40,15 @@ const NewsLetter = () => {
         </div>
         <div className={styles.contents}>
           <h2>newsletter subscription</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe minus nostrum obcaecati! Similique quisquam ut dignissimos culpa ab quos quis.</p>
-          <form className="block w-full">
+          <motion.p variants={fadeInFromBottom}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe minus nostrum obcaecati! Similique quisquam ut dignissimos culpa ab quos quis.</motion.p>
+          <motion.form variants={fadeInFromBottom} className="block w-full">
             <div className={styles.inputField}>
               <input type="email" placeholder = 'Enter your email address'  />
               <button className="button-secondary">subscribe</button>
             </div>
-          </form>
+          </motion.form>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
