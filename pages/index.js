@@ -43,7 +43,7 @@ const Anchor = ({href}) =>{
 
 export default function Home() {
 
-  const buttonVariants  = {
+  const variants  = {
     visible: {
      opacity: 1,
      y: '0%',
@@ -55,40 +55,40 @@ export default function Home() {
     },
     hidden:{
         opacity: 0,
-        y: '50%'
+        y: '100%'
     },
    
  }
-
+  
   return (
     <>
       <section id = "banner">
-        <div className="relative min-h-[400px] md:min-h-[460px] lg:min-h-[600px] xl:min-h-[800px]">
+        <motion.div initial = {'hidden'} animate={'visible'} transition = {{staggerChildren: 0.2}} className="relative min-h-[400px] md:min-h-[460px] lg:min-h-[600px] xl:min-h-[800px]">
           <div className="text-center flex flex-col justify-center gap-6 ">
-            <h1>
-              <span className="relative after:absolute after:w-full after:h-full after:bg-primary after:top-0 after:left-0 after:z-[-1] px-2">
+            <h1  >
+              <motion.span variants={variants} className="inline-block relative after:absolute after:w-full after:h-full after:bg-primary after:top-0 after:left-0 after:z-[-1] px-2">
                 Providing services
-              </span>
+              </motion.span>
               <br />
-              <span>Your Business Deserves</span>
+              <motion.span variants={variants} className = 'inline-block'>Your Business Deserves</motion.span>
             </h1>
-            <motion.div initial = {'hidden'} animate={'visible'} transition = {{staggerChildren: 0.2}} className="flex gap-4 justify-center">
-              <motion.div variants={buttonVariants} >
+            <div  className="flex gap-4 justify-center">
+              <motion.div variants={variants} >
               <Link className="button-primary " href="/getStarted">
                 get started
               </Link>
               </motion.div>
-              <motion.div variants={buttonVariants}  >
+              <motion.div variants={variants}  >
               <Link href="/services" className="button-primary bg-transparent border border-custom-gray/20 text-custom-black shadow-none">
                 How It works
               </Link>
               </motion.div>
-            </motion.div>
+            </div>
           </div>
           <div className="absolute bottom-0 w-[590px] md:w-full  left-1/2 -translate-x-1/2 z-[-1] ">
             <Image src={bannerIllustration} alt="banner image" className="w-full" priority />
           </div>
-        </div>
+        </motion.div>
       </section>
       <Partners />
       <section id = 'intro'>
