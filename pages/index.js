@@ -73,13 +73,13 @@ export default function Home() {
               <motion.span variants={variants} className = 'inline-block'>Your Business Deserves</motion.span>
             </h1>
             <div  className="flex gap-4 justify-center">
-              <motion.div variants={variants} >
-              <Link className="button-primary " href="/getStarted">
+              <motion.div variants={variants} whileTap = {{scale: 0.9}} >
+              <Link className="button-primary" href="/getStarted">
                 get started
               </Link>
               </motion.div>
               <motion.div variants={variants}  >
-              <Link href="/services" className="button-primary bg-transparent border border-custom-gray/20 text-custom-black shadow-none">
+              <Link href="/services" className="button-primary bg-transparent border border-custom-gray/20 text-custom-black shadow-none hover:bg-primary ">
                 How It works
               </Link>
               </motion.div>

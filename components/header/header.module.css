@@ -2,7 +2,7 @@
     @apply relative z-20 ;
 }
 .headerWrapper{
-    @apply  flex justify-between items-center py-4 lg:justify-between;
+    @apply  flex justify-between items-center py-2 lg:justify-between lg:py-3 lg:pt-2;
 }
 .menu{
     @apply z-10 translate-x-full  capitalize w-full h-screen overflow-y-scroll grid place-items-center  font-medium text-base bg-white fixed left-0 top-0 transition-transform ease-in-out duration-300 lg:overflow-hidden lg:bg-transparent lg:relative lg:h-fit lg:w-fit   lg:text-sm lg:font-normal  lg:mx-auto lg:transform-none lg:text-custom-gray  xl:text-base  ;

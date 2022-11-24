@@ -5,6 +5,7 @@ import Image from "next/image";
 import servicesIllustration from 'public/images/illustrations/services.svg'
 import styles from "styles/services.module.css";
 import {motion} from 'framer-motion'
+import ServicesIllustration from "components/servicesIllustration";
 const Services = () => {
   return (
     <div>
@@ -18,7 +19,7 @@ const Services = () => {
           <p>Praesent placerated egestas egestas cras rhone magna rutrum tellus laoreet</p>
         </div>
         <div className=" relative lg:bottom-[50px] mt-14 lg:m-0">
-        <Image src = {servicesIllustration} alt = 'illustration'/>
+          <ServicesIllustration />
         </div>
       </section>
       <section>

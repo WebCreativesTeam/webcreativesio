@@ -43,7 +43,7 @@ section{
 @layer components{
 
     .button-primary{
-        @apply bg-custom-black capitalize text-white px-4 rounded-[10px] h-[50px] min-w-[140px] text-center flex justify-center items-center text-sm font-semibold shadow-primary shadow-[6px_6px_0px_0px] xl:shadow-[8px_8px_0px_0px] xl:shadow-primary xl:text-base xl:h-[60px] lg:px-6 xl:min-w-[180px];
+        @apply bg-custom-black capitalize text-white px-4 rounded-[10px] h-[50px] min-w-[140px] text-center flex justify-center items-center text-sm font-semibold shadow-primary shadow-[6px_6px_0px_0px] xl:shadow-[8px_8px_0px_0px] xl:shadow-primary xl:text-base xl:h-[60px] lg:px-6 xl:min-w-[180px] hover:shadow-[0px_0px_0px_0px] hover:shadow-primary overflow-hidden transition-all duration-500 hover:bg-primary hover:text-custom-black ;
     }
     .button-secondary{
         @apply bg-secondary capitalize  rounded-[8px] px-4  h-[50px] min-w-[120px] text-center flex justify-center items-center text-xs font-medium  xl:text-base xl:h-[60px] xl:min-w-[160px] lg:px-6;
