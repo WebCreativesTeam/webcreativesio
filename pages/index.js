@@ -16,7 +16,7 @@ const SectionLayout = ({children, id, title,description, element}) =>{
   return(
     <section id = {id}>
     <div className="relative">
-      <div className="flex justify-between items-end mb-6 lg:mb-8 xl:mb-12">
+      <div className="flex items-end justify-between mb-6 lg:mb-8 xl:mb-12">
         <div className="sectionTitleLeft">
           <h2>{title}</h2>
           <p>{description}</p>
@@ -26,7 +26,7 @@ const SectionLayout = ({children, id, title,description, element}) =>{
        </div>
       </div>
       {children}
-      <div className=" mt-6 mx-auto w-fit lg:hidden">
+      <div className="mx-auto mt-6  w-fit lg:hidden">
       {element}
       </div>
     </div>
@@ -64,7 +64,7 @@ export default function Home() {
     <>
       <section id = "banner">
         <motion.div initial = {'hidden'} animate={'visible'} transition = {{staggerChildren: 0.2}} className="relative min-h-[400px] md:min-h-[460px] lg:min-h-[600px] xl:min-h-[800px]">
-          <div className="text-center flex flex-col justify-center gap-6 ">
+          <div className="flex flex-col justify-center gap-6 text-center ">
             <h1  >
               <motion.span variants={variants} className="inline-block relative after:absolute after:w-full after:h-full after:bg-primary after:top-0 after:left-0 after:z-[-1] px-2">
                 Providing services
@@ -72,14 +72,14 @@ export default function Home() {
               <br />
               <motion.span variants={variants} className = 'inline-block'>Your Business Deserves</motion.span>
             </h1>
-            <div  className="flex gap-4 justify-center">
+            <div  className="flex justify-center gap-4">
               <motion.div variants={variants} whileTap = {{scale: 0.9}} >
               <Link className="button-primary" href="/getStarted">
                 get started
               </Link>
               </motion.div>
               <motion.div variants={variants}  >
-              <Link href="/services" className="button-primary bg-transparent border border-custom-gray/20 text-custom-black shadow-none hover:bg-primary ">
+              <Link href="/services" className="bg-transparent border shadow-none button-primary border-custom-gray/20 text-custom-black hover:bg-primary ">
                 How It works
               </Link>
               </motion.div>
@@ -92,7 +92,7 @@ export default function Home() {
       </section>
       <Partners />
       <section id = 'intro'>
-        <div className="twoColGrid flex-col-reverse">
+        <div className="flex-col-reverse twoColGrid">
           <div className="twoColGridContents ">
             <h2>
               Solution for <br /> every business needs
@@ -129,7 +129,7 @@ export default function Home() {
         </div>
       </section>
       <SectionLayout id = 'services' title  ={'What we provide'} description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.'} element = {<Anchor href = '/services' />}>
-      <motion.div initial = 'hidden' whileInView ='visible' transition={{staggerChildren: 0.2}} viewport = {{margin: '-50%', once: true}} className="flex flex-row justify-center items-center gap-4 flex-wrap lg:justify-between  lg:gap-6 xl:gap-8">
+      <motion.div initial = 'hidden' whileInView ='visible' transition={{staggerChildren: 0.2}} viewport = {{margin: '-50%', once: true}} className="flex flex-row flex-wrap items-center justify-center gap-4 lg:justify-between lg:gap-6 xl:gap-8">
 
         <ServiceCard
           link="/services"
@@ -191,7 +191,7 @@ export default function Home() {
       </SectionLayout>
       <SectionLayout id = 'projects' title = 'our projects' description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.'} element ={<Anchor href = '/projects' />}>
        
-       <motion.div initial = 'hidden' whileInView ='visible' transition={{staggerChildren: 0.2}} viewport = {{margin: '-50%', once: true}} className="flex flex-row justify-center items-center gap-4 flex-wrap lg:justify-between  lg:gap-6 xl:gap-8">
+       <motion.div initial = 'hidden' whileInView ='visible' transition={{staggerChildren: 0.2}} viewport = {{margin: '-50%', once: true}} className="flex flex-row flex-wrap items-center justify-center gap-4 lg:justify-between lg:gap-6 xl:gap-8">
        
        <ProjectCard title ='Watch - Product Responsive Landing Page' image  = '/images/projects/projectImage1.png' bg = '#F5E6FE'/>
       
@@ -201,7 +201,7 @@ export default function Home() {
        </motion.div>
       </SectionLayout>
       <SectionLayout id ='blogs' title  = 'our blogs' description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.'} element = {<Anchor href = '/blogs' />}>
-        <motion.div initial = 'hidden' whileInView='visible' transition={{staggerChildren: 0.2}} viewport = {{margin: '-50%', once: true}} className="flex flex-row justify-center items-center gap-6 flex-wrap lg:justify-between  xl:gap-8">
+        <motion.div initial = 'hidden' whileInView='visible' transition={{staggerChildren: 0.2}} viewport = {{margin: '-50%', once: true}} className="flex flex-row flex-wrap items-center justify-center gap-6 lg:justify-between xl:gap-8">
           <BlogPostCard title = {'Best Design Tips You Will Read This Year'} image = '/images/blogs/blog1.png' category={'travel'} date = '10-9-2022'/>
           <BlogPostCard title = {'Best Design Tips You Will Read This Year'} image = '/images/blogs/blog2.png' category={'development'} date = '10-9-2022'/>
           <BlogPostCard title = {'Best Design Tips You Will Read This Year'} image = '/images/blogs/blog3.png' category={'seo'} date = '10-9-2022'/>
@@ -209,7 +209,7 @@ export default function Home() {
       </SectionLayout>
       <SectionLayout id = 'testimonials' title = 'Customer Feedback' description={'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.'} element ={<div></div>}>
          
-           <motion.div initial = 'hidden' whileInView='visible' transition={{staggerChildren: 0.2}} viewport = {{margin: '-50%', once: true}} className="flex flex-col items-center md:flex-row md:justify-between gap-4 lg:gap-6 xl:gap-8">
+           <motion.div initial = 'hidden' whileInView='visible' transition={{staggerChildren: 0.2}} viewport = {{margin: '-50%', once: true}} className="flex flex-col items-center gap-4 md:flex-row md:justify-between lg:gap-6 xl:gap-8">
            <TestimonialCard image ='/images/testimonials/review1.png' name = 'name1' role='designer' review = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.' rating = {4} color = '#FFF80A' />
           <TestimonialCard image ='/images/testimonials/review1.png' name = 'name1' role='designer' review = 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi, enim.' rating = {4} color = '#26C6DA' />
            </motion.div>

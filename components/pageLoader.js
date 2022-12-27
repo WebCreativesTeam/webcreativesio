@@ -20,11 +20,11 @@ const PageLoader = () => {
           setIsLoading(false)
         });
     
-      }, [Router])
+      }, [])
 
     return ( 
         <AnimatePresence>
-        {loading && <motion.div initial = {{opacity: 0}} animate = {{opacity: 1}} exit = {{opacity: 0}}   className="w-full h-full fixed top-0 left-0 bg-black/70 backdrop-blur-lg grid place-items-center z-50 ">
+        {loading && <motion.div initial = {{opacity: 0}} animate = {{opacity: 1}} exit = {{opacity: 0}}   className="fixed top-0 left-0 z-50 grid w-full h-full bg-black/70 backdrop-blur-lg place-items-center ">
             <svg
   xmlns="http://www.w3.org/2000/svg"
   xmlnsXlink="http://www.w3.org/1999/xlink"
