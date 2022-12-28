@@ -10,10 +10,12 @@ import BlogPostCard from "components/blogPostCard/blogPostCard";
 import NewsLetter from "components/newsLetter/newsLetter";
 import ProjectCard from "components/projectCard/projectCard";
 import {motion} from 'framer-motion'
+import Head from "next/head";
 
 
 const SectionLayout = ({children, id, title,description, element}) =>{
-  return(
+  return (
+    
     <section id = {id}>
     <div className="relative">
       <div className="flex items-end justify-between mb-6 lg:mb-8 xl:mb-12">
@@ -26,7 +28,7 @@ const SectionLayout = ({children, id, title,description, element}) =>{
        </div>
       </div>
       {children}
-      <div className="mx-auto mt-6  w-fit lg:hidden">
+      <div className="mx-auto mt-6 w-fit lg:hidden">
       {element}
       </div>
     </div>
@@ -62,6 +64,12 @@ export default function Home() {
   
   return (
     <>
+      <Head>
+        <title> Website Design & Development Services | WebCreatives</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+        <meta></meta>
+      </Head>
       <section id = "banner">
         <motion.div initial = {'hidden'} animate={'visible'} transition = {{staggerChildren: 0.2}} className="relative min-h-[400px] md:min-h-[460px] lg:min-h-[600px] xl:min-h-[800px]">
           <div className="flex flex-col justify-center gap-6 text-center ">
