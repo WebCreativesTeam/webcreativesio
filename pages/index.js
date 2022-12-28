@@ -64,12 +64,6 @@ export default function Home() {
   
   return (
     <>
-      <Head>
-        <title> Website Design & Development Services | WebCreatives</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-
-        <meta></meta>
-      </Head>
       <section id = "banner">
         <motion.div initial = {'hidden'} animate={'visible'} transition = {{staggerChildren: 0.2}} className="relative min-h-[400px] md:min-h-[460px] lg:min-h-[600px] xl:min-h-[800px]">
           <div className="flex flex-col justify-center gap-6 text-center ">

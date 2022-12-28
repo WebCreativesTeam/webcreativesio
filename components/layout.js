@@ -4,9 +4,6 @@ import Header from "./header/header";
 import PageLoader from "./pageLoader";
 
 const Layout = ({children}) => {
-    useEffect(()=>{
-
-    })
     return ( 
         <>
         <PageLoader />
